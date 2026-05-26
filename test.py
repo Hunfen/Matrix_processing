@@ -791,7 +791,7 @@ def main() -> None:
     else:
         logger.info("No spectrum files to convert.")
 
-    # # 临时输出 image_curve_match 为 CSV 以便查看对应关系
+    # 输出 image_curve_match 为 CSV 以便查看对应关系
     match_csv_path = output_folder / "image_curve_match.csv"
     with open(match_csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
@@ -803,7 +803,6 @@ def main() -> None:
     plot_all_images(output_folder, image_files)
     process_curves_and_masks_px(output_folder, image_curve_match)
 
-    # ==================== 第 5 步：生成ppt ====================
     logger.info("All operations completed.")
 
 
